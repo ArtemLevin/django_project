@@ -1,0 +1,20 @@
+{% extends 'recipes/exp.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+
+        <div class="upper_left_block">
+
+                <h1>{{ recipe.name }}</h1><br>
+                <div>{{ recipe.description }}</div><br>
+                <p> <u>Ингредиенты</u> </p><br><br>
+                <div>{{ recipe.ingredients }}</div><br>
+                <p> <u>Процесс приготовления</u> </p><br><br>
+                <div>{{ recipe.cooking_process }}</div><br>
+                <div>{{ recipe.author }}</div><br>
+                <a href="{% url 'edit_recipe' recipe.id  %}" ><p align="right">Редактировать рецепт</p></a>
+
+        </div>
+                <div class="upper_right_block"><img src="{{ recipe.image.url }}" height="500"></div>
+</div>
+{% endblock %}

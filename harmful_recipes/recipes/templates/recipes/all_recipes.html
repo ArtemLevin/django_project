@@ -1,0 +1,16 @@
+{% extends 'recipes/exp.html' %}
+{% load static %}
+{% block content %}
+<div class="container_all_recipes">
+        {% for recipe in recipes %}
+        <div class="upper_left_block">
+
+                <div>{{ recipe.id }}</div>
+                <a href="{% url 'full_recipe' recipe.id  %}">{{ recipe.name }}</a><br>
+                <div>{{ recipe.description }}</div><br>
+
+        </div>
+        {% endfor %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,203 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 900px;
+}
+
+.header{
+
+    display: flex;
+    justify-content: space-between;
+    background-color: #FAEBD7;
+}
+
+.container{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.left_menu{
+
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFF0;
+    align-items: center;
+}
+
+.right_block{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+
+}
+
+.upper_left_block{
+    margin: 10px;
+    display: inline-block; /* Строчно-блочный элемент */
+    transition: 0.3s; /* Время перехода */
+}
+
+.upper_left_block:hover {
+    transform: rotate(3deg) translate(5px); /* Трансформация */
+   }
+
+.upper_right_block{
+    margin: 10px;
+    display: inline-block; /* Строчно-блочный элемент */
+    transition: 0.3s; /* Время перехода */
+}
+
+.upper_right_block:hover {
+    transform: rotate(3deg) translate(5px); /* Трансформация */
+   }
+
+.down_left_block{
+    margin: 10px;
+    background-color: #666;
+    display: inline-block; /* Строчно-блочный элемент */
+    transition: 0.3s; /* Время перехода */
+}
+
+.down_left_block:hover {
+    transform: rotate(3deg) translate(5px); /* Трансформация */
+   }
+
+.down_right_block{
+    margin: 10px;
+    background-color: #777;
+    display: inline-block; /* Строчно-блочный элемент */
+    transition: 0.3s; /* Время перехода */
+}
+
+.down_right_block:hover {
+    transform: rotate(3deg) translate(5px); /* Трансформация */
+   }
+
+.news{
+
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFF0;
+}
+
+.footer{
+
+    display: flex;
+    justify-content: space-between;
+    background-color: #FAEBD7;
+}
+
+
+.upper_three_recipes{
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.down_two_recipes{
+    display: flex;
+    justify-content: center;
+}
+
+.text-blur-out {
+	-webkit-animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+
+@-webkit-keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+            filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+            filter: blur(12px) opacity(0%);
+  }
+}
+@keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+            filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+            filter: blur(12px) opacity(0%);
+  }
+}
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.form_name{
+
+}
+
+.form_description{
+
+}
+
+form_ingridients{
+
+}
+
+.form_cook_process{
+
+}
+
+.form_cook_time{
+
+}
+
+.form_cook_calories{
+
+}
+
+.form_image{
+
+}
+
+.form_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.container_all_recipes{
+    display: flex;
+    flex-direction: column;
+}

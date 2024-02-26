@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" href="{% static 'recipes/style/style_exp_5.css' %}" rel="stylesheet">
+    <title>Experiments</title>
+<!--    <iframe src="" frameborder="0" allow="autoplay"></iframe>-->
+    <style>
+
+    a {
+        background-image: linear-gradient(to right, #352384, #e90b8b); /* Параметры градиента */
+        background-repeat: no-repeat; /* Фон не повторяется */
+        background-size: 10px 2px; /* Линия будет шириной 10px и высотой 2px */
+        background-position: left bottom; /* Положение в левом нижнем углу */
+        padding-bottom: 2px; /* Расстояние от текста до линии */
+        text-decoration: none; /* Убираем подчёркивание */
+        transition: 0.9s; /* Время перехода */
+    }
+    a:hover {
+        background-size: 100% 2px; /* Линия занимает всю ширину */
+    }
+  </style>
+</head>
+<body>
+<div class="main">
+    <div class="header" >
+        <p><a class="head_menu" href="{% url 'exp' %}">Главная</a></p>
+        <p><a class="head_menu" href="{% url 'recipe_form' %}">Добавить рецепт</a></p>
+        <p><a class="head_menu" href="{% url 'all_recipes' %}">Редактировать рецепт</a></p>
+        <p><a class="head_menu" href="{% url 'user_form' %}">Регистрация</a></p>
+
+    </div>
+
+    <div class="container">
+          <div class="left_menu">
+
+              <h1>Menu bar</h1>
+              <p><a class="button" href="https:vk.com">Button 1</a></p>
+              <p><a class="button" href="https:vk.com">Button 2</a></p>
+              <p><a class="button" href="https:vk.com">Button 3</a></p>
+              <p><a class="button" href="https:vk.com">Button 4</a></p>
+              <p><a class="button" href="https:vk.com">Button 5</a></p>
+
+          </div>
+
+          <div class="right_block">
+
+              {% block content %}
+              <div class="upper_three_recipes">
+
+                  <div class="upper_left_block">
+                      <a href="{% url 'full_recipe'  recipes.0.id   %}"><img src="{{ recipes.0.image.url }}" height="300"  width="400"></a>
+                      <p>{{ recipes.0.name }}</p><br>
+                      <p>{{ recipes.0.description|truncatewords:5 }}</p>
+                  </div>
+
+                  <div class="upper_right_block">
+                      <a href="{% url 'full_recipe' recipes.1.id  %}"><img src="{{ recipes.1.image.url }}" height="300" width="400"></a>
+                      <p>{{ recipes.1.name }}</p><br>
+                      <p>{{ recipes.1.description|truncatewords:5 }}</p>
+                  </div>
+
+                  <div class="upper_left_block">
+                      <a href="{% url 'full_recipe' recipes.2.id  %}"><img src="{{ recipes.2.image.url }}" height="300" width="400"></a>
+                      <p>{{ recipes.2.name }}</p><br>
+                      <p>{{ recipes.2.description|truncatewords:5 }}</p>
+                  </div>
+
+              </div>
+
+              <div class="down_two_recipes">
+
+                  <div class="upper_left_block">
+                      <a href="{% url 'full_recipe' recipes.3.id  %}"><img src="{{ recipes.3.image.url }}" height="300" width="400"></a>
+                      <p>{{ recipes.3.name }}</p><br>
+                      <p>{{ recipes.3.description|truncatewords:5 }}</p>
+                  </div>
+
+                  <div class="upper_left_block">
+                      <a href="{% url 'full_recipe' recipes.4.id  %}"><img src="{{ recipes.4.image.url }}" height="300" width="400"></a>
+                      <p>{{ recipes.4.name }}</p><br>
+                      <p>{{ recipes.4.description|truncatewords:5 }}</p>
+                  </div>
+
+              </div>
+
+
+              {% endblock %}
+
+          </div>
+
+          <div class="news">
+                <p><a class="head_menu" href="https:vk.com">News menu button 1</a></p>
+                <p><a class="head_menu" href="https:vk.com">News menu button 2</a></p>
+                <p><a class="head_menu" href="https:vk.com">News menu button 3</a></p>
+                <p><a class="head_menu" href="https:vk.com">News menu button 4</a></p>
+                <p><a class="head_menu" href="https:vk.com">News menu button 5</a></p>
+
+          </div>
+
+    </div>
+
+    <div class="footer">
+        <p><a class="head_menu" href="https:vk.com">Footer menu button 1</a></p>
+        <p><a class="head_menu" href="https:vk.com">Footer menu button 2</a></p>
+        <p><a class="head_menu" href="https:vk.com">Footer menu button 3</a></p>
+        <p><a class="head_menu" href="https:vk.com">Footer menu button 4</a></p>
+        <p><a class="head_menu" href="https:vk.com">Footer menu button 5</a></p>
+
+    </div>
+</div>
+</body>
+</html>

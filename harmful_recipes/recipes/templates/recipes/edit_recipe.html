@@ -1,0 +1,51 @@
+{% extends 'recipes/exp.html' %}
+{% load static %}
+{% block content %}
+<div class="left_menu">
+  <div>
+  <h1>Редактируем рецепт блюда {{ recipe.name }}</h1>
+
+  </div>
+    <form action="" method="post" enctype="multipart/form-data">
+    <div class="form_form">
+      {% csrf_token %}
+      <div class="form_name">
+      Введите название рецепта {{ form.name }}
+      </div>
+      <br>
+      <div class="form_description">
+      Введите кратое описание {{ form.description }}
+      </div>
+      <br>
+      <div class="form_ingridients">
+      Ингредиенты {{ form.ingredients }}
+      </div>
+      <br>
+      <div class="form_cook_process">
+      Введите этапы приготовления {{ form.cooking_process }}
+      </div>
+      <br>
+      <div class="form_cook_time">
+      Введите время приготовления {{ form.cooking_time }}
+      </div>
+      <br>
+      <div class="form_amount_of_servings">
+      Введите количество персон {{ form.amount_of_servings }}
+      </div>
+      <br>
+      <div class="form_cook_calories">
+      Введите калорийность {{ form.calories }}
+      </div>
+      <br>
+      <div class="form_image">
+      Введите фото блюда {{ form.image }}
+      </div>
+      <br>
+      <input type="submit" value="Отправить">
+      <br>
+      <input type="reset" value="Очистить">
+    </div>
+    </form>
+
+</div>
+{% endblock %}

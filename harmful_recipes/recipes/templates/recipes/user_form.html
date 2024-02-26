@@ -1,0 +1,42 @@
+{% extends 'recipes/exp.html' %}
+{% load static %}
+{% block content %}
+<div class="left_menu">
+  <div>
+  <h1>Регистрационная форма</h1>
+  </div>
+    <form action="" method="post" enctype="multipart/form-data">
+    <div class="form_form">
+      {% csrf_token %}
+      <div class="form_name">
+      Введите имя {{ form.name }}
+      </div>
+      <br>
+      <div class="form_description">
+      Введите почту {{ form.email }}
+      </div>
+      <br>
+      <div class="form_ingridients">
+      Введите пароль {{ form.password }}
+      </div>
+      <br>
+      <div class="form_cook_process">
+      Введите возраст {{ form.age }}
+      </div>
+      <br>
+      <div class="form_cook_time">
+      Введите уровень мастерства {{ form.status }}
+      </div>
+      <br>
+      <div class="form_image">
+      Прикрепите аватар {{ form.avatar }}
+      </div>
+      <br>
+      <input type="submit" value="Отправить">
+      <br>
+      <input type="reset" value="Очистить">
+    </div>
+    </form>
+
+</div>
+{% endblock %}

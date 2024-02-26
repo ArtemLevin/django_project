@@ -1,0 +1,19 @@
+{% extends 'recipes/exp.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+
+        <div class="upper_left_block">
+
+                <div>{{ recipe.name }}</div><br>
+                <div>{{ recipe.description }}</div><br>
+                {{ recipe.cook_process }}
+
+
+
+
+        </div>
+                <div class="upper_right_block"><img src="{% static 'recipes/img/steak.jpg' %}" height="500"></div>
+
+</div>
+{% endblock %}
