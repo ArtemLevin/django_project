@@ -23,7 +23,7 @@ class Command(BaseCommand):
                 name=dish['название'],
                 description=dish['описание'],
                 ingredients=dish['ингредиенты'],
-                cook_process=' '.join(dish['шаги']),
+                cooking_process=' '.join(dish['шаги']),
                 author=choice(users_list),
                 published_date=fake.date_time_this_year(),
                 cooking_time=fake.random_int(min=1, max=10),
