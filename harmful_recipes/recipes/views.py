@@ -1,3 +1,4 @@
+import datetime
 from random import choice
 
 from django.shortcuts import render, get_object_or_404
@@ -124,3 +125,11 @@ def upload_image(request, recipe_id):
     else:
         form = RecipeForm()
     return render(request, 'recipes/upload_image_form.html', {'form': form, 'recipe': recipe})
+
+def task_of_the_day(request):
+    current_date = datetime.datetime.now()
+    if current_date.day % 2 == 0:
+        task_list = ["Поколение Python Professional", "Databases", "Git", "Django", "English", "Linux"]
+    else:
+        task_list = ["Поколение Python Control", "OOP", "Asyncio", "Regex", "Собеседование"]
+        return render(request, 'recipes/task_of_the_day.html', {'task_list': task_list})
